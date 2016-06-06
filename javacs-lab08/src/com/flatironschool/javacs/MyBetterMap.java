@@ -88,19 +88,11 @@ public class MyBetterMap<K, V> implements Map<K, V> {
 	public boolean containsValue(Object target) {
 		// to find a value, we have to search all maps
         // TODO: fill this in.
+		
 		int index = target==null ? 0 : Math.abs(target.hashCode()) % maps.size();
-        MyLinearMap<K, V> map = maps.get(index);
-        Set<V> val = (Set<V>)map.values();
-        for(V value: val){
-        	if(value==null){
-        		if(target==null)
-        		{
-        			return true;
-        		}
-        	}
-        	else if(value.equals((V)target)){
-        		return true;
-        	}
+        for(MyLinearMap<K, V> map : maps)
+        {
+        	if(map.containsValue(target))return true;
         }
 		return false;
 	}

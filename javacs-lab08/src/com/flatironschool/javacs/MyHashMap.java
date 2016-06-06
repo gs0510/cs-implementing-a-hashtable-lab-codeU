@@ -57,8 +57,7 @@ public class MyHashMap<K, V> extends MyBetterMap<K, V> implements Map<K, V> {
         	}
         }
         maps = maps1;
-    //    throw new UnsupportedOperationException();
-	}
+    }
 
 	/**
 	 * @param args
