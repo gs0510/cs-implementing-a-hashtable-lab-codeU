@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.flatironschool.javacs;
 
 import java.util.ArrayList;
